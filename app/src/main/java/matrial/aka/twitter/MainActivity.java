@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TWITTER_KEY = "GqwOQXxIw66SOW6gltFgi8caU";
     private static final String TWITTER_SECRET = "mqr5G1ZwDHZt9nfGYZhKMbkwFlt6680hMuitsPISdsGPkhubKy";
 
-    // tags that will hold the retrived username and profile image after successful login
+    // tags to send the username and profile image after successful login to the activity
     public static final String KEY_USER = "name";
     public static final String profile_img_url = "image_url";
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void success(Result<User> result) {
+            public void success(Result<User> userResult) {
                 // if succeed the create  a user object from user.Result.data
                 User user = userResult.data;
 
