@@ -40,5 +40,9 @@ public class ProfileActivity extends AppCompatActivity {
         //loading image...
         imageLoader = CustomVolleyRequest.getInstance(this).getImageLoader();
         imageLoader.get(profileImageUrl,ImageLoader.getImageListener(profileImage,R.mipmap.ic_launcher,android.R.drawable.ic_dialog_alert));
+        profileImage.setImageUrl(profileImageUrl,imageLoader);
+
+        //setting the user name in the text view
+        textviewusername.setText("@"+username);
     }
 }
